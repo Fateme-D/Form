@@ -1,0 +1,323 @@
+@font-face {
+    font-family: yekan2;
+    src: url('../fonts/yekan-font/Yekan.eot');
+    src: url('../fonts/yekan-font/Yekan.eot?#iefix') format('FontName-opentype'),
+        url('../fonts/yekan-font/Yekan.woff') format('woff'),
+        url('../fonts/yekan-font/Yekan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fonts/eot/IRANSansWeb(FaNum)_Bold.eot');
+  src: url('../fonts/eot/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+     url('../fonts/woff2/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+     url('../fonts/woff/IRANSansWeb(FaNum)_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     url('../fonts/ttf/IRANSansWeb(FaNum)_Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/eot/IRANSansWeb(FaNum)_Medium.eot');
+  src: url('../fonts/eot/IRANSansWeb(FaNum)_Medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+     url('../fonts/woff2/IRANSansWeb(FaNum)_Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+     url('../fonts/woff/IRANSansWeb(FaNum)_Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     url('../fonts/ttf/IRANSansWeb(FaNum)_Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/eot/IRANSansWeb(FaNum)_Light.eot');
+  src: url('../fonts/eot/IRANSansWeb(FaNum)_Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+     url('../fonts/woff2/IRANSansWeb(FaNum)_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+     url('../fonts/woff/IRANSansWeb(FaNum)_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     url('../fonts/ttf/IRANSansWeb(FaNum)_Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot');
+  src: url('../fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+     url('../fonts/woff2/IRANSansWeb(FaNum)_UltraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+     url('../fonts/woff/IRANSansWeb(FaNum)_UltraLight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     url('../fonts/ttf/IRANSansWeb(FaNum)_UltraLight.ttf') format('truetype');
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/eot/IRANSansWeb(FaNum).eot');
+  src: url('../fonts/eot/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+     url('../fonts/woff2/IRANSansWeb(FaNum).woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+     url('../fonts/woff/IRANSansWeb(FaNum).woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     url('../fonts/ttf/IRANSansWeb(FaNum).ttf') format('truetype');
+}
+  
+  
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+  
+  
+body {
+    background-color: #d2ebc5 !important;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-top: -2rem;
+    font-family: IRANSans, yekan2, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #585858;
+}
+
+.navbar-cstm {
+    box-shadow: 0 20px 25px -5px rgb(146 146 146 / 10%), 0 10px 10px -5px rgb(0 0 0 / 4%);
+}
+/* hover button navbar: */
+.nav-item-cstm {
+    font-family: IRANSans, yekan2, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 2px 8px;
+    position: relative;
+    transition: all .2s;
+    width: max-content;
+}
+.nav-item-cstm:hover .nav-link-cstm {
+    color: #38c5fb !important;
+}
+.nav-item-cstm::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #38c5fb;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.nav-item-cstm:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+
+
+
+
+
+.form_style {
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* border: 1px solid #0099ff; */
+    border-radius: 26px 5px 26px 5px;
+    background: #fff;
+}
+.form_h2 {
+    color: #656565;
+    font-family: IRANSans, yekan2, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin: 8px 0px 25px 0px;
+}
+.form__group {
+    margin: 24px auto 0px auto;
+    margin: 0px auto 20px auto;
+    max-width: 220px;
+    position: relative;
+}
+.form__input {
+    outline: none;
+    color: #656565;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-family: IRANSans, yekan2, sans-serif;
+    text-align: center;
+    padding: 8px 10px;
+    transition: all .25s;
+    border-bottom: 3px solid transparent;
+    border: 1px solid #ceced1;
+    display: block;
+    width: 100%;
+}
+.form__input::placeholder {
+    color: #777;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: IRANSans, yekan2, sans-serif;
+}
+.form__input:focus {
+    outline: none;
+    box-shadow: 0 10px 20px rgba(#000, .1);
+    border-bottom: 3px solid #55c57a;
+}
+.form__input:focus:invalid {
+    border-bottom: 3px solid #ff7730;
+}
+
+.form__input::-webkit-input-placeholder {
+    color: #999;
+}
+.form__label {
+    font-size: 11px;
+    font-weight: 500;
+    font-family: IRANSans, yekan2, sans-serif;
+    margin-right: 10px;
+    margin-top: 7px;
+    display: block;
+    transition: all .3s;
+    color: #949494;
+    text-align: right;
+    position: absolute;
+    top: -13px;
+    right: 0px;
+    opacity: 1;
+    visibility: visible;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+.span-input {
+    font-size: 10px;
+    padding-right: 3px;
+}
+
+.form__input:placeholder-shown ~ .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(40px);
+}
+.form__error {
+    font-size: 10.5px;
+    font-weight: 600;
+    font-family: IRANSans, yekan2, sans-serif;
+    color: #ff6718;
+    position: absolute;
+    right: 9px;
+}
+.form__checkbox {
+    padding-top: 4px;
+}
+
+.checkbox-text {
+    font-family: IRANSans, yekan2, sans-serif;
+    color: #868686;
+    font-size: 11px;
+    position: relative;
+    /* right: -41px; */
+    right: -15%;
+    top: -9px;
+}
+.form__checkbox-input {
+    position: relative;
+    right: -15%;
+    top: -5px;
+}
+.form__submit {
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+    border-radius: 6px;
+    transition: 0.25s;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    background: #1bc5ae;
+    border: 0px;
+    margin-top: 4px;
+    width: 220px;
+    padding: 8px 10px;
+    font-family: IRANSans, yekan2, sans-serif;
+}
+
+.form__submit:hover {
+    background: #15b09b;
+}
+
+.form_hr {
+    width: 85%;
+    background-color: #bfbac5;
+}
+
+.form__forget-pass {
+    margin: 11px;
+    font-family: IRANSans, yekan2, sans-serif;
+}
+
+.form__forget-pass a {
+    font-family: IRANSans, yekan2, sans-serif;
+    color: #a4aeae;
+    text-decoration: none;
+    font-size: small;
+}
+
+.form__forget-pass a:hover {
+    color: #1a73e8;
+}
+
+.register-link {
+    font-family: IRANSans, yekan2, sans-serif;
+    color: #a4aeae;
+    margin-bottom: 9px;
+    font-size: small;
+}
+
+.register-link a {
+    font-family: IRANSans, yekan2, sans-serif;
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    color: #428ff3;
+}
+
+@media only screen and (max-width:426px) {
+    .form_style {
+        width: 70%;
+    }
+    .form__group , .form__submit {
+        width: 90%;
+    }
+    .form__forget-pass a {
+        font-size: 11px;
+    }
+    .register-link {
+        color: #a4aeae;
+        margin-bottom: 9px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:321px) {
+    .form__checkbox-input {
+        right: -8%;
+    }
+    .form_style span {
+        right: -10%;
+        font-size: 12px;
+    }
+    .form__group,
+    .form__submit {
+        font-size: 13px;
+    }
+}

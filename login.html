@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title> Talent Login</title>
+    <style>
+        .mynav{
+            margin-right: 0 !important ;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top navbar-cstm">
+        <div class="container-fluid">
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse " id="navbarCollapse">
+                <ul class="navbar-nav mt-4 mt-lg-0 ml-auto mynav">
+                    <li class="nav-item nav-item-cstm">
+                        <a class="nav-link nav-link-cstm" href="index.html">خانه</a>
+                    </li>
+                    <li class="nav-item nav-item-cstm">
+                        <a class="nav-link nav-link-cstm" href="index.html">تماس با ما</a>
+                    </li>
+                    <li class="nav-item nav-item-cstm">
+                        <a class="nav-link nav-link-cstm" href="index.html">درباره ما</a>
+                    </li>
+                    <li class="nav-item nav-item-cstm">
+                        <a class="nav-link nav-link-cstm" href="index.html">همکاری با ما</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <img alt="Image placeholder" src="img/logo.svg" id="navbar-logo">
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-login-register">
+        <form action="/login" method="post" class="form_style">
+            <h2 class="form_h2">ورود به حساب کاربری</h2>
+            <div class="form__group">
+                <input type="tel" name="phonenumber" id="phonenumber" class="form__input" placeholder="شماره موبایل" required pattern="[0-9]{11}" onblur="CheckEmpty(event);">
+                <div id="phonenumber-error" class="form__error "></div>
+                <label for="phonenumber" class="form__label"> شماره موبایل </label>
+            </div>
+            <div class="form__group">
+                <input type="password" name="password" id="password" class="form__input" placeholder="کلمه عبور" required minlength="6" onblur="CheckEmpty(event);">
+                <div id="password-error"class="form__error "></div>
+                <label for="password" class="form__label"> کلمه عبور </label>
+            </div>
+            <div class="form__checkbox">
+                <input class="form__checkbox-input" type="checkbox" name="checkbox">
+                <span class="checkbox-text">مرا به خاطر داشته باش</span>
+            </div>
+            <input class="form__submit" type="submit" name="submit" value="ورود" onclick="CheckEmpty();">
+            <hr class="form_hr">
+            <p class="form__forget-pass">
+                <a href="/reset-password">رمز عبور خود را فراموش کرده‌ اید؟</a>
+            </p>
+            <div class="register-link">کاربر جدید هستید؟ <a href="register.html">ثبت نام در سایت</a></div>
+        </form>
+    </div>
+    <script type='text/javascript' src='js/jquery-3.2.1.min.js'></script>
+    <script type='text/javascript' src='js/bootstrap.js'></script>  
+    <script type='text/javascript' src='js/custom.js'></script>
+</body>
+</html>
